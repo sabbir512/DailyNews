@@ -15,13 +15,16 @@ const App = () => {
   return (
     <Router>
       <div>
+        {/*We saw loading bar at top of the page when we load the page With Loading bar we can do that, we have initialized a state which is 0 so side the progress we have set our useState property and method is running at NewsItem component*/}
         <LoadingBar height={3} color="#f11946" progress={progress} />
         <Navbar style={{ position: "sticky" }} />
 
+        {/*Using React-Router-Dom for page routing */}
         <Routes>
           <Route
             path="/"
             element={
+              //Sending props to the NewsItem Component
               <News
                 setProgress={setProgress}
                 key="general"
@@ -34,6 +37,7 @@ const App = () => {
           <Route
             path="/business"
             element={
+              //Different Routes for different category
               <News
                 setProgress={setProgress}
                 key="business"
