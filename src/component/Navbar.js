@@ -66,7 +66,8 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <div className="form-check form-switch">
+
+            {/* <div className="form-check form-switch">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -79,7 +80,7 @@ const Navbar = () => {
               >
                 Change mode
               </label>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
