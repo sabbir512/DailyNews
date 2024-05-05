@@ -42,7 +42,7 @@ const News = (props) => {
     updateNews();
   }, []);
 
-  //Function for Fetch more data
+  //Function for Fetch more data when client will scroll
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=${
       props.country
