@@ -2,14 +2,12 @@ import "./App.css";
 
 import React, { useState } from "react";
 import Navbar from "./component/Navbar";
-import News from "./component/News";
+import DemoNews from "./component/demoNews";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  const pageSize = 15;
-
   const [progress, setProgress] = useState(0);
 
   return (
@@ -23,89 +21,7 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={
-              //Sending props to the NewsItem Component
-              <News
-                setProgress={setProgress}
-                key="general"
-                pageSize={pageSize}
-                country="us"
-                category="general"
-              />
-            }
-          ></Route>
-          <Route
-            path="/business"
-            element={
-              //Different Routes for different category
-              <News
-                setProgress={setProgress}
-                key="business"
-                pageSize={pageSize}
-                country="us"
-                category="business"
-              />
-            }
-          ></Route>
-          <Route
-            path="/entertainment"
-            element={
-              <News
-                setProgress={setProgress}
-                key="entertainment"
-                pageSize={pageSize}
-                country="us"
-                category="entertainment"
-              />
-            }
-          ></Route>
-          <Route
-            path="/health"
-            element={
-              <News
-                setProgress={setProgress}
-                key="health"
-                pageSize={pageSize}
-                country="us"
-                category="health"
-              />
-            }
-          ></Route>
-          <Route
-            path="/science"
-            element={
-              <News
-                setProgress={setProgress}
-                key="science"
-                pageSize={pageSize}
-                country="us"
-                category="science"
-              />
-            }
-          ></Route>
-          <Route
-            path="/sports"
-            element={
-              <News
-                setProgress={setProgress}
-                key="sports"
-                pageSize={pageSize}
-                country="us"
-                category="sports"
-              />
-            }
-          ></Route>
-          <Route
-            path="/technology"
-            element={
-              <News
-                setProgress={setProgress}
-                key="technology"
-                pageSize={pageSize}
-                country="us"
-                category="technology"
-              />
-            }
+            element={<DemoNews setProgress={setProgress} category="sports" />}
           ></Route>
         </Routes>
       </div>
